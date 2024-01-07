@@ -35,6 +35,7 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.constraintlayout)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -74,9 +75,6 @@ android {
         getByName("release") {
             isMinifyEnabled = false
         }
-    }
-    buildFeatures {
-        compose = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
